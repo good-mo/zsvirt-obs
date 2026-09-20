@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zsvirt-obs"
+version = "0.1.0"
+description = "面向 ZSvirt 虚拟机内部 AI 工作负载的可观测性原型：虚拟机为边界、工作负载为对象、事件关联为核心"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ZSvirt Observability Prototype" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+zobs = "zobs.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["zobs*"]
